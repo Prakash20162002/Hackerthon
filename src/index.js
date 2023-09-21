@@ -5,17 +5,13 @@ const app = express()
 const LogInCollection = require("./mongo")
 const port = process.env.PORT || 3000
 app.use(express.json())
-
 app.use(express.urlencoded({ extended: false }))
 const tempelatePath = path.join(__dirname, '../templates')
 const publicPath = path.join(__dirname, '../public')
 console.log(publicPath);
-
 app.set('view engine', 'hbs')
 app.set('views', tempelatePath)
 app.use(express.static(publicPath))
-
-
 // hbs.registerPartials(partialPath)
 
 
