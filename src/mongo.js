@@ -1,6 +1,6 @@
 const mongoose=require("mongoose")
 // import mongoose from "mongoose";
-mongoose.connect("mongodb+srv://prakashhalwai59:Prakashmongo@123@cluster0.dlz75bp.mongodb.net/?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://prakashhalwai59:prakash123@cluster0.dlz75bp.mongodb.net/?retryWrites=true&w=majority")
 .then(()=>{
     console.log('connected');
 })
