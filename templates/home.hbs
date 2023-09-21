@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-waste Management System</title>
+    <link rel="stylesheet" href="output.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- HEADER PAGE -->
+
+    <header class="bg-gradient-to-r from-amber-500 via-amber-700 to-amber-900 p-3">
+        <div class="flex items-center">
+            <div class="container mx-auto flex  justify-between items-center">
+
+
+                <!-- Logo -->
+
+
+                <a href="index.html" class="text-green-800 text-4xl font-thin ">E-waste Management System</a>
+
+
+                <img src="https://seeklogo.com/images/E/e-waste-recycling-in-uae-logo-33A8B7C3F1-seeklogo.com.png"
+                    alt="Logo" class="h-8 w-8  ">
+
+
+
+                <!-- Navigation Menu -->
+
+
+                <nav class="hidden md:flex space-x-4">
+
+
+                    <a href="#ABOUT-US" class="text-white hover:text-gray-400">About Us</a>
+                    <a href="stats.html" class="text-white hover:text-gray-400">Global Statistics</a>
+                    <a href="#" class="text-white hover:text-gray-400">Tools</a>
+                    <a href="guidelines.html" class="text-white hover:text-gray-400">Guidelines</a>
+                    <a href="#CONTACT-US" class="text-white hover:text-gray-400">Contact us</a>
+                    <a href="login.html" class="text-white hover:text-gray-400">Register/Log In</a>
+
+                </nav>
+
+                <!-- Mobile Menu Button (Hamburger) -->
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white text-xl">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                            class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+    </header>
+
+    <!-- Mobile Menu (Hidden by default) -->
+
+
+
+
+    <div id="mobile-menu" class="hidden md:hidden bg-gradient-to-r from-amber-500 via-amber-700 to-amber-900 p-4">
+        <a href="#ABOUT-US" class="block text-white py-2">About Us</a>
+        <a href="stats.html" class="block text-white py-2">Global Statistics</a>
+        <a href="#" class="block text-white py-2">Tools</a>
+        <a href="guidelines.html" class="block text-white py-2">Guidelines</a>
+        <a href="#CONTACT-US" class="block text-white py-2">Contact us</a>
+        <a href="#" class="block text-white py-2">Register/Log In</a>
+
+    </div>
+
+    <!-- Script for screen repositioning when clicked on About Us on mobile menu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+
+            mobileMenuLinks.forEach(function (link) {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+
+
+
+    <!-- JavaScript to toggle mobile menu -->
+
+
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+
+    <!-- Hero Section -->
+
+    <section class=" h-96 bg-cover bg-center"
+        style="background-image: url('https://industry.ricoh.com/-/media/Ricoh/Sites/industry/support/img/102757257_20.jpg?rev=5e67a16f288d4adc8fbf9d0610a87be9&sc_lang=en&h=1797&w=5609&la=en&hash=05C208398185F4FD8DA4DCFD0010B6BA');">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl font-bold mb-4 py-20 text-white">Locate your nearest E-waste facility!</h1>
+            <p class="text-lg mb-6 text-white font-bold py-1 px-4 ">We provide you with the latest tools to safely
+                dispose your electronic waste</p>
+            <a href="#"
+                class="bg-white text-green-700 hover:bg-green-700 hover:text-white  px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out py-2">Dispose
+                your E-Waste today!</a>
+        </div>
+    </section>
+
+    <!-- Awareness Boxes -->
+    <section class="bg-gradient-to-r from-green-600 via-green-700 to-green-800 text-white py-12">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-extrabold mb-8">Environmental Hazards of E-Waste</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Box 1 -->
+
+
+                <div class="bg-gradient-to-r from-green-600 via-green-700 to-green-800 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-4 text-white">
+                        <a href="https://www.youtube.com/playlist?list=PLsPStYXvzMN_Ei6fNCvf11yJExGsjelnB"
+                            class=" hover:text-gray-600" target="_blank">1. Heavy Metals Contamination</a>
+                    </h3>
+                    <p class="text-white">
+                        E-waste contains heavy metals like lead, mercury, and cadmium that can leach into the soil and
+                        water, polluting ecosystems and harming wildlife.
+                    </p>
+                </div>
+
+
+                <!-- Box 2 -->
+
+
+                <div class="bg-gradient-to-r from-green-600 via-green-700 to-green-800 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-4 text-white">
+                        <a href="https://www.youtube.com/playlist?list=PLsPStYXvzMN82WDENvCzcqAoMEto2KhLA"
+                            class=" hover:text-gray-600" target="_blank">2. Toxic Chemicals in Flame Retardants</a>
+                    </h3>
+                    <p class="text-white">
+                        Flame retardants used in electronics release toxic fumes when burned, contributing to air
+                        pollution and posing health risks to humans and animals.
+                    </p>
+                </div>
+
+
+                <!-- Box 3 -->
+
+
+                <div class="bg-gradient-to-r from-green-600 via-green-700 to-green-800 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold mb-4 text-white">
+                        <a href="https://www.youtube.com/playlist?list=PLsPStYXvzMN858gFmY5BzGdIGAVBIu5z1"
+                            class=" hover:text-gray-600" target="_blank">3. Harmful Effects of PVC</a>
+                    </h3>
+                    <p class="text-white">
+                        E-waste often contains PVC (polyvinyl chloride), which contains chlorine and releases harmful
+                        chemicals during production and disposal, impacting the environment and health.
+                    </p>
+                </div>
+            </div>
+    </section>
+
+    <!-- Minimizing Carbon Footprint Section -->
+    <section class="bg-gradient-to-r from-green-600 via-green-700 to-green-800 text-white py-6 ">
+        <div class="container mx-auto">
+            <h2 class="text-2xl font-extrabold mb-6">Minimizing Your Carbon Footprint</h2>
+            <p class="text-white leading-loose">
+                You can reduce your environmental impact by disposing of e-waste correctly:
+            </p>
+            <ul class="list-disc pl-6 mt-4">
+                <li>Recycle e-waste at certified recycling centers.</li>
+                <li>Avoid disposing of e-waste in landfills or incinerators.</li>
+                <li>Consider donating or refurbishing old electronics.</li>
+                <li>Support e-waste awareness campaigns and sustainable electronics practices.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="bg-green-100 py-12">
+        <section id="ABOUT-US"></section>
+        <div class="container mx-auto text-center">
+            <!-- About Us Title -->
+            <h2 class="text-4xl font-light text-black mb-6">ABOUT US</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+                <div class="md:h-auto">
+                    <!-- Replace this URL with your image URL -->
+                    <img src="About Us Poster (1).jpg" alt="About Us" class="w-full h-auto mx-auto max-w-md">
+                </div>
+
+                <div class="p-4 text-black font-bold text-xl text-left md:text-center">
+                    We are a team of 6 dedicated students from Brainware University with a common goal, that is to make
+                    the world a better place through responsible e-waste management. Our journey began when we realized
+                    the environmental challenges posed by electronic waste.
+
+                    Seeing e-waste piling up in landfills and its harmful impact on the environment and communities, we
+                    decided to take action. Our mission is to create a platform that simplifies e-waste recycling and
+                    disposal. Through our website, you can easily find certified e-waste recycling centers nearby, learn
+                    proper disposal methods, and understand the environmental benefits of recycling electronics.
+
+                    We believe that by making e-waste recycling more accessible, we can reduce its negative impact on
+                    our planet. Join us in our mission for a cleaner, greener future. Together, we can make a difference
+                    and ensure a sustainable world for future generations. Thank you for being part of our journey
+                    towards responsible e-waste management.
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <!-- script for scrolling down towards the about us section in desktop menu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const aboutUsLink = document.querySelector('a[href="#ABOUT-US"]');
+
+            if (aboutUsLink) {
+                aboutUsLink.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const targetSection = document.querySelector('#ABOUT-US');
+
+                    if (targetSection) {
+
+                        const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY;
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            }
+        });
+    </script>
+
+
+
+
+    <!-- Contact Information -->
+    <section class="bg-gray-200 py-16" id="CONTACT-US">
+        <div class="container mx-auto text-center md:text-left">
+
+            <h2 class="text-3xl font-serif mb-4">CONTACT US</h2>
+            <p class="text-gray-600 mb-4 font-serif font-semibold text-xl">Have any questions? We would love to hear
+                from you.</p>
+            <div class="mb-6">
+                <div class="mb-2">
+                    <span class="text-black text-base font-sans">398, Ramkrishnapur Rd, near Jagadighata Market,
+                        Barasat, Kolkata, West Bengal 700125</span>
+                </div>
+                <div>
+                    <span class="text-gray-700 text-base font-sans">18003099943 - Call our Toll-Free Number</span>
+                </div>
+            </div>
+
+        </div>
+        <!-- Contact Form -->
+        <div class="container mx-auto mt-8">
+            <form action="https://formspree.io/f/mpzglnab" method="POST" class="bg-gray-200 p-6 rounded-lg shadow-md">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-600">Name</label>
+                    <input type="text" id="name" name="name"
+                        class="w-full py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:border-gray-400"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-600">Email</label>
+                    <input type="email" id="email" name="email"
+                        class="w-full py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:border-gray-400"
+                        required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-600">Message</label>
+                    <textarea id="message" name="message" rows="4"
+                        class="w-full py-2 px-3 border border-gray-300 rounded-md focus:outline-none focus:border-gray-400"
+                        required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit"
+                        class="bg-gray-400 text-white py-2 px-6 rounded-md hover:bg-gray-700 transition duration-300 ease-in-out">Send
+                        Message</button>
+                </div>
+            </form>
+        </div>
+
+        <!--SCRIPT FOR CONTACT US BUTTON SCROLL  -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const aboutUsLink = document.querySelector('a[href="#CONTACT-US"]');
+
+                if (aboutUsLink) {
+                    aboutUsLink.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        const targetSection = document.querySelector('#CONTACT-US');
+
+                        if (targetSection) {
+                            targetSection.scrollIntoView({
+                                behavior: "smooth"
+                            });
+                        }
+                    });
+                }
+            });
+        </script>
+
+        <!-- SCRIPT FOR CONTACT US BUTTON SCROLL FOR MOBILE MENU -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+
+                mobileMenuLinks.forEach(function (link) {
+                    link.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute('href').substring(1);
+                        const targetSection = document.getElementById(targetId);
+
+                        if (targetSection) {
+                            targetSection.scrollIntoView({
+                                behavior: "smooth"
+                            });
+                        }
+                    });
+                });
+            });
+        </script>
+
+        <!-- Footer Section -->
+        <footer class="text-white py-8 absolute w-full  bgcol">
+            <div class="container mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center">
+                <div class="text-lg font-semibold text-center md:text-left">&copy; 2023 E-waste Management System</div>
+                <div class="mt-4 md:mt-0 space-x-4 text-center md:text-right">
+                    <a href="privacy.html" class="text-white hover:text-gray-400">Privacy Policy</a>
+                    <a href="terms.html" class="text-white hover:text-gray-400">Terms of Service</a>
+                    <a href="guidelines.html" class="text-white hover:text-gray-400">Guidelines</a>
+                </div>
+            </div>
+        </footer>
+        <script src="api.js"></script>
+
+
+</body>
+
+</html>

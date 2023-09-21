@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Your head content here -->
+
+    <!-- Include your API JavaScript file -->
+    
+</head>
+<body>
+    <!-- Create elements to display real-time data -->
+    <div>
+        <p>Real-Time Carbon Emissions: <span id="emissions"></span></p>
+    </div>
+
+    <!-- JavaScript for fetching and displaying real-time data -->
+    <script>
+        // Fetch and display real-time data when the page loads
+        document.addEventListener("DOMContentLoaded", function () {
+            fetchCarbonCalculations(); // Fetch data initially
+
+            setInterval(fetchCarbonCalculations, 60000); // Fetch data every minute
+        });
+    </script>
+
+    
+</body>
+</html>
