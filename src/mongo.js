@@ -23,6 +23,6 @@ const logInSchema=new mongoose.Schema({
     }
 })
 
-const LogInCollection=new mongoose.model('user',logInSchema)
+const LogInCollection=new mongoose.model('users',logInSchema)
 
 module.exports=LogInCollection
