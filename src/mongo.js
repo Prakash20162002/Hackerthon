@@ -7,7 +7,7 @@ mongoose.connect("mongodb+srv://prakashhalwai59:prakash123@cluster0.dlz75bp.mong
 .catch((e)=>{
     console.log(e);
 })
-
+ 
 const logInSchema=new mongoose.Schema({
     name:{
         type:String,

@@ -1,6 +1,7 @@
 const express = require("express")
 const path = require("path")
 const app = express()
+const cors=require("cors")
 // const hbs = require("hbs")
 const LogInCollection = require("./mongo")
 const port = process.env.PORT || 3000
@@ -14,6 +15,13 @@ app.set('views', tempelatePath)
 app.use(express.static(publicPath))
 // hbs.registerPartials(partialPath)
 
+app.use(cors());
+
+app.get("/", (req, res) => {
+
+    res.setHeader("Access-control-allow-credentials", "true");
+    res.send("Api Is running.......");
+});
 
 app.get('/signup', (req, res) => {
     res.render('sign')
